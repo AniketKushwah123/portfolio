@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="index.js">
+    <title>personal portfolio -- Aniket Kushwah</title>
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.png" class="logo">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Service</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+
+            </nav>
+            <div class="header-text">
+                <p>UI/UX designer</p>
+                <br><br>
+                <h1>Hi , I am <span>Aniket</span> Kushwah <br> from Gwalior [M.P] </h1>
+            </div>
+        </div>
+    </div>
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/TCIC4773.JPG" class="A">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub">About Me</h1>
+                    <br><br>
+                    <p class="AB">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, earum. Velit iusto odio
+                        earum eveniet animi excepturi porro tempore ducimus sed. Ab dolorum nemo distinctio optio sit.
+                        Suscipit est quasi necessitatibus sunt, reiciendis a fugiat dicta, animi laboriosam dolore
+                        corrupti ab eligendi fuga. Fugit illum officia praesentium, perspiciatis aliquid totam magnam,
+                        quae nihil odio nobis sunt, commodi labore nisi consequuntur modi odit? Magnam ipsum, cumque
+                        fuga possimus laboriosam esse obcaecati, aliquid porro quae inventore ratione voluptatum. Autem
+                        a fugiat consequatur hic rem officia laudantium nostrum! Nulla accusantium veniam doloremque
+                        alias corrupti blanditiis quaerat officia autem sit, quae exercitationem eos perferendis!</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('Experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('Education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI?UX</span><br>designing web app inteface</li>
+                            <li><span>web development</span><br>frontend developer</li>
+                            <li><span>App developer</span><br>designing android app /ios</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="Experience">
+                        <ul>
+                            <li><span>2018-2022</span><br>Lorem ipsum dolor sit.</li>
+                            <li><span>2019-2023</span><br>Lorem ipsum dolor sit amet.</li>
+                            <li><span>App developer</span><br>Lorem ipsum dolor sit amet consectet ur.</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="Education">
+                        <ul>
+                            <li><span>2022</span><br>Lorem ipsum dolor sit.</li>
+                            <li><span>2021</span><br>Lorem ipsum dolor sit amet.</li>
+                            <li><span>App developer</span><br>Lorem ipsum dolor sit amet consectetur.</li>
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div id="services">
+        <div class="container">
+            <h1 class="sub">MY Services</h1>
+            <div class="services-list">
+                <div>
+                   
+                    <h2>Web design</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt iure deserunt rem et dolores, odio ex labore accusamus eius fugit?</p>
+                    <a href="#">learn more</a>
+                </div>
+                <div>
+                    <h2>UI/UX design</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt iure deserunt rem et dolores, odio ex labore accusamus eius fugit?</p>
+                    <a href="#">learn more</a>
+                </div>
+                <div>
+                    <h2>App design</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt iure deserunt rem et dolores, odio ex labore accusamus eius fugit?</p>
+                    <a href="#">learn more</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+
+        }
+    </script>
+
+</body>
+
+</html>
